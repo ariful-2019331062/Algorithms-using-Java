@@ -50,16 +50,15 @@ public class NodeList {
     stack.add(node);
     while (!stack.isEmpty()) {
       Node tempNode = stack.removeLast();
-      if (tempNode.isVisited == false) {
-        tempNode.isVisited = true;
-        System.out.print(tempNode.getName() + " ");
-        ArrayList<Node> neighbour = getNeighbour(tempNode);
-        for (Node nodes : neighbour) {
-          // System.out.print(nodes.getName() + " ");
+      tempNode.isVisited = true;
+      System.out.print(tempNode.getName() + " ");
+      ArrayList<Node> neighbour = getNeighbour(tempNode);
+      for (Node nodes : neighbour) {
+        if (nodes.isVisited == false) {
+          nodes.isVisited = true;
           stack.add(nodes);
         }
       }
-
     }
   }
 
