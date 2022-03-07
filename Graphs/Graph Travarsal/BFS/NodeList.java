@@ -8,7 +8,7 @@ public class NodeList {
   public NodeList(ArrayList<Node> arrayList) {
     int ListSize = arrayList.size();
     this.arrayList = arrayList;
-    adjacencyMatrix = new int[ListSize][ListSize];
+    this.adjacencyMatrix = new int[ListSize][ListSize];
 
   }
 
