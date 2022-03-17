@@ -1,0 +1,20 @@
+public class Node {
+  private int index;
+  private String name;
+  public Node parent = null;
+
+  Node(String name, int index) {
+    this.index = index;
+    this.name = name;
+  }
+
+  public Boolean isVisited = false;
+
+  public String getName() {
+    return name;
+  }
+
+  public int getIndex() {
+    return this.index;
+  }
+}

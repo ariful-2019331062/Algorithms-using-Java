@@ -1,6 +1,32 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+class Nodes {
+  private int index;
+  private String name;
+  public boolean isVisited = false;
+
+  private ArrayList<Nodes> list = new ArrayList<>();
+
+  Nodes(String name, int index) {
+    this.index = index;
+    this.name = name;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void addNeighbour(Nodes neighbour) {
+    list.add(neighbour);
+  }
+
+  public ArrayList<Nodes> getNeighbourList() {
+    return list;
+  }
+
+}
+
 class ListNodes {
   private ArrayList<Nodes> arrayList;
 
@@ -57,32 +83,6 @@ class ListNodes {
       }
     }
   }
-}
-
-class Nodes {
-  private int index;
-  private String name;
-  public boolean isVisited = false;
-
-  private ArrayList<Nodes> list = new ArrayList<>();
-
-  Nodes(String name, int index) {
-    this.index = index;
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void addNeighbour(Nodes neighbour) {
-    list.add(neighbour);
-  }
-
-  public ArrayList<Nodes> getNeighbourList() {
-    return list;
-  }
-
 }
 
 public class BFS_With_adjacencyList {

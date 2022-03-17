@@ -1,6 +1,7 @@
 public class Node {
   private int index;
   private String name;
+  public boolean isVisited;
 
   Node(String name, int index) {
     this.index = index;
@@ -9,5 +10,9 @@ public class Node {
 
   public String getName() {
     return name;
+  }
+
+  public int getIndex() {
+    return 0;
   }
 }

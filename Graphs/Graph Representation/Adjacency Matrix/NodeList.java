@@ -33,4 +33,7 @@ public class NodeList {
     }
   }
 
+  public void BfsVisit(Node node) {
+  }
+
 }
